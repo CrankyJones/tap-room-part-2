@@ -1,22 +1,20 @@
 import React from "react";
 
-
-
-
-
-
-
 function Header(){
   const styleTitleObject = {
     backgroundColor: "Black",
     color: "white",    
     textAlign: 'center',
-    padding: '20px',
+    paddingBottom: '1%',
+    paddingTop: '1%'
+
   }
   return (
     <>
-      <h1 style={styleTitleObject}>Brew-Ha House</h1>
+    <div style={styleTitleObject}>
+      <h1>Brew-Ha House</h1>
       <h4>Check out our current on-tap beverages! </h4>
+      </div>
     </>
   );
 }

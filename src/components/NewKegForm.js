@@ -14,23 +14,23 @@ function NewKegForm(props) {
   }
   return(
     <>
-      <form onSubmit={handleNewKegFormSubmission}>
-        <input
+      <form className='form' onSubmit={handleNewKegFormSubmission}>
+        <input className='input'
           type = 'text'
           name = 'name'
           placeholder = 'Keg Name' />
-        <input
+        <input className='input'
           type = 'text'
           name = 'price'
-          placeholder = 'Keg Pint Cost' />
-        <textarea
-          name = 'description'
-          placeholder = 'Keg Description' />
-        <input
+          placeholder = 'Pint Cost' />
+        <input className='input'
           type = 'text'
           name = 'potency'
-          placeholder = 'Keg Alcohol %' />
-        <button type = 'submit'>Add New Keg</button>
+          placeholder = 'Alcohol %' />
+        <textarea className='input'
+          name = 'description'
+          placeholder = 'Description' />
+        <button className='button' type = 'submit'>Add New Keg</button>
       </form>
     </>
   );

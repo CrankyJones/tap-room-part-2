@@ -3,19 +3,35 @@ import PropTypes from "prop-types";
 
 function KegDetails(props){
   const { keg, onServingPint, onSwappingKeg } = props;
+  const styleKegInfo = {
+    paddingLeft: '2%',
+  }
+  const styleListItems = {
+    backgroundColor: "Black",
+    color: "white",    
+    textAlign: 'left',
+    paddingTop: '2%',
+    paddingBottom: '2%',
+    paddingRight: '2%',
+    paddingLeft: '2%',
+    marginRight: '70%',
+    marginLeft: '8%',
+  }
   return (
     <>
-      <h2>Keg Info</h2>
+      <h2 style={styleKegInfo}>Keg Info</h2>
+    <div style={styleListItems}>
       <h3>{keg.name}</h3>
       <p>Price per Pint: {keg.price}</p>
+      <p>Alcohol Content {keg.potency}% ABV</p>
       <p>{keg.description}</p>
       <p>Current Pints Remaining: {keg.quantity}</p>
       {keg.quantity > 0 &&
-        <button onClick={()=> onServingPint(keg.id) }>Serve Pint</button>}
+        <button className='button' onClick={()=> onServingPint(keg.id) }>Serve Pint</button>}
       {keg.quantity === 0 &&
         <h1>Keg is Cashed. Waiting for some fresh brew.</h1> &&
-        <button onClick={()=> onSwappingKeg(keg.id) }>Swap Keg</button>}
-
+        <button className='button' onClick={()=> onSwappingKeg(keg.id) }>Swap Keg</button>}
+    </div>
     </>
   );
 }
