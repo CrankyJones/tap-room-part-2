@@ -26,4 +26,4 @@ Keg.porptypes = {
   whenKegClicked: PropTypes.func
 }
 
-export default Product;
+export default Keg;

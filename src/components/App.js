@@ -5,7 +5,7 @@ import KegControl from "./KegControl";
 function App() {
   return(
     <>
-      <Header/>
+      <Header />
       <KegControl />
     </>
   );
