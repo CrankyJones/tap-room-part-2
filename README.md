@@ -1,7 +1,7 @@
 # _Merch-Site_
-An application for learning React CRUD functionality.
+An independent project for React Fundamentals.
 
-### _**Geof Rosenmund, Andy Lawson, Kerry Lang**_
+### _**Geof Rosenmund**_
 
 [Epicodus](https://www.epicodus.com/) - [React](https://www.learnhowtoprogram.com/react) - [React Fundamentals](https://www.learnhowtoprogram.com/react/react-fundamentals)
 
@@ -33,7 +33,7 @@ Diagram showing parent and children components and how they will be structured i
 ## Setup/Installation
 
 * To clone this directory, navigate in your terminal to the desired location of the project and run command `git clone `
-* Navigate to top level of the directory with command `cd merch-site`
+* Navigate to top level of the directory with command `cd tap-room`
 * Run local server with command `npm run start`
 
 ---
