@@ -6,21 +6,45 @@ function Keg(props) {
       backgroundColor: "Black",
       color: "white",    
       textAlign: 'left',
-      marginRight: '85%',
+      marginRight: '80%',
       marginLeft: '6%',
       padding: '20px',
+      borderRadius:'8px',
+        }
+    const styleQuarterLeft = {
+      backgroundColor: "orange",
+      color: "white",    
+      textAlign: 'left',
+      marginRight: '80%',
+      marginLeft: '6%',
+      padding: '20px',
+      borderRadius:'8px',
+        }
+    const styleTenLeft = {
+      backgroundColor: "red",
+      color: "white",    
+      textAlign: 'left',
+      marginRight: '80%',
+      marginLeft: '6%',
+      padding: '20px',
+      borderRadius:'8px',
         }
   return(
     <>
-    <div style = {styleListItems}>
-    <div onClick ={() => props.whenKegClicked(props.id)}>
-      <h4 className='col-md-6'>{props.name}</h4>
-      {/* <p>{props.price}</p>
-      <p>{props.description}</p>
-      <p>{props.potency}</p>
-      <p>Pints Remaining: {props.quantity}</p> */}
-    </div>
-    </div>
+      <div onClick ={() => props.whenKegClicked(props.id)}>
+      {props.quantity > 25 &&
+        <div style = {styleListItems}>
+          <h4>{props.name}</h4>
+        </div>}
+      {props.quantity < 25 && props.quantity > 11 &&
+        <div style = {styleQuarterLeft}>
+          <h4>{props.name}</h4>
+      </div>}
+      {props.quantity <= 10 &&
+      <div style = {styleTenLeft}>
+        <h4>{props.name}</h4>
+      </div>}
+      </div>
     <br></br>
     </>
   );

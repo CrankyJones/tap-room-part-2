@@ -16,6 +16,7 @@ function KegDetails(props){
     paddingLeft: '2%',
     marginRight: '70%',
     marginLeft: '8%',
+    borderRadius:'8px',
   }
   return (
     <>
@@ -43,3 +44,16 @@ KegDetails.propTypes = {
 };
 
 export default KegDetails;
+
+{keg.quantity > 25 &&
+  <div style = {styleListItems}>
+    <h4>{keg.name}</h4>
+  </div>}
+{keg.quantity < 25 && keg.quantity > 11 &&
+  <div style = {styleQuarterLeft}>
+    <h4>{keg.name}</h4>
+</div>}
+{keg.quantity <= 10 &&
+<div style = {styleTenLeft}>
+  <h4>{keg.name}</h4>
+</div>}
