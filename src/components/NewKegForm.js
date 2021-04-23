@@ -18,18 +18,22 @@ function NewKegForm(props) {
         <input className='input'
           type = 'text'
           name = 'name'
-          placeholder = 'Keg Name' />
+          placeholder = 'Keg Name'
+          required />
         <input className='input'
           type = 'text'
           name = 'price'
-          placeholder = 'Pint Cost' />
+          placeholder = 'Pint Cost'
+          required />
         <input className='input'
           type = 'text'
           name = 'potency'
-          placeholder = 'Alcohol %' />
+          placeholder = 'Alcohol %'
+          required />
         <textarea className='input'
           name = 'description'
-          placeholder = 'Description' />
+          placeholder = 'Description'
+          required />
         <button className='button' type = 'submit'>Add New Keg</button>
       </form>
     </>

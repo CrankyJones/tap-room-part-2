@@ -30,7 +30,7 @@ function KegDetails(props){
         <button className='button' onClick={()=> onServingPint(keg.id) }>Serve Pint</button>}
       {keg.quantity === 0 &&
         <h1>Keg is Cashed. Waiting for some fresh brew.</h1> &&
-        <button className='button' onClick={()=> onSwappingKeg(keg.id) }>Swap Keg</button>}
+        <button className='kegButton' onClick={()=> onSwappingKeg(keg.id) }>Swap Keg</button>}
     </div>
     </>
   );

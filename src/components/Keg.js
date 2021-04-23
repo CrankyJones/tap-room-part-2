@@ -5,20 +5,23 @@ function Keg(props) {
     const styleListItems = {
       backgroundColor: "Black",
       color: "white",    
-      textAlign: 'center',
+      textAlign: 'left',
+      marginRight: '85%',
+      marginLeft: '6%',
+      padding: '20px',
         }
   return(
     <>
     <div style = {styleListItems}>
     <div onClick ={() => props.whenKegClicked(props.id)}>
-      <h4>{props.name}</h4>
+      <h4 className='col-md-6'>{props.name}</h4>
       {/* <p>{props.price}</p>
       <p>{props.description}</p>
       <p>{props.potency}</p>
       <p>Pints Remaining: {props.quantity}</p> */}
     </div>
     </div>
-    <hr/>
+    <br></br>
     </>
   );
 }

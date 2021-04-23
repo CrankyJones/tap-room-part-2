@@ -12,8 +12,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+.kegButton{
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: rgb(226, 222, 0);
+  color: white;
+  border: 2px solid white;
+  border-radius: 12px;
+}
+.button:hover{
+  background-color: darkgrey;
+}
 .button {
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+  padding: 15px;
   background-color: black;
   color: white;
   border: 2px solid white;
