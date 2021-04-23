@@ -59,3 +59,8 @@ textarea {
   width: 250px;
   height: 100px;
 }
+
+.wrapper{
+  display: grid;
+  grid-template-columns: 22% 22% 22% 22%;
+}

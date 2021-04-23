@@ -6,25 +6,22 @@ function Keg(props) {
       backgroundColor: "Black",
       color: "white",    
       textAlign: 'left',
-      marginRight: '80%',
       marginLeft: '6%',
       padding: '20px',
       borderRadius:'8px',
         }
     const styleQuarterLeft = {
-      backgroundColor: "orange",
+      backgroundColor: 'rgb(160, 104, 0)',
       color: "white",    
       textAlign: 'left',
-      marginRight: '80%',
       marginLeft: '6%',
       padding: '20px',
       borderRadius:'8px',
         }
     const styleTenLeft = {
-      backgroundColor: "red",
+      backgroundColor: "rgb(95,6,6)",
       color: "white",    
       textAlign: 'left',
-      marginRight: '80%',
       marginLeft: '6%',
       padding: '20px',
       borderRadius:'8px',
@@ -55,7 +52,7 @@ Keg.propTypes = {
   price: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   potency: PropTypes.string.isRequired,
-  quantity:  PropTypes.string.isRequired,
+  quantity:  PropTypes.number.isRequired,
   id: PropTypes.string,
   whenKegClicked: PropTypes.func
 }
