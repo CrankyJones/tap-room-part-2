@@ -11,14 +11,12 @@ function Header(){
   }
   return (
     <>
-    <div style={styleTitleObject}>
-      <h1>Brew-Ha House</h1>
-      <h4>Check out our current on-tap beverages! </h4>
+      <div style={styleTitleObject}>
+        <h1>Brew-Ha House</h1>
+        <h4>Check out our current on-tap beverages! </h4>
       </div>
     </>
   );
 }
-
-
 
 export default Header;

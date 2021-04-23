@@ -1,4 +1,4 @@
-# _Merch-Site_
+# _Tap-Room_
 An independent project for React Fundamentals.
 
 ### _**Geof Rosenmund**_
@@ -22,7 +22,7 @@ An independent project for React Fundamentals.
 
 ## Description
 
-A React web app for creating beers for a tap room.
+A React web app for creating beers for a tap room. It allows users to add new keg varieties to the bar. Clicking on the name of the beer brings up more details. These details include the price per pint, the ABV, a description, and the nuumber of pints remaining in the keg. When a keg has less than 25 pints remaining, its list card and detail card will turn a burnt orange. When there are less than 10 pints left in the keg, the cards turn a dark red. Once the pint quantity hits 0, the Serve button disappers and is replace with a swap keg button. A message is displayed stating that this keg is empty. Clicking the button refreshes the quantity back to 124 pints and changes the color of the card back to its default black.
 
 ## Component Diagram
 Diagram showing parent and children components and how they will be structured in relation to one another:

@@ -29,18 +29,21 @@ function Keg(props) {
   return(
     <>
       <div onClick ={() => props.whenKegClicked(props.id)}>
-      {props.quantity > 25 &&
-        <div style = {styleListItems}>
-          <h4>{props.name}</h4>
-        </div>}
-      {props.quantity < 25 && props.quantity > 11 &&
-        <div style = {styleQuarterLeft}>
-          <h4>{props.name}</h4>
-      </div>}
-      {props.quantity <= 10 &&
-      <div style = {styleTenLeft}>
-        <h4>{props.name}</h4>
-      </div>}
+        {props.quantity > 25 &&
+          <div style = {styleListItems}>
+            <h4>{props.name}</h4>
+          </div>
+        }
+        {props.quantity < 25 && props.quantity > 11 &&
+          <div style = {styleQuarterLeft}>
+            <h4>{props.name}</h4>
+          </div>
+        }
+        {props.quantity <= 10 &&
+          <div style = {styleTenLeft}>
+            <h4>{props.name}</h4>
+          </div>
+        }
       </div>
     <br></br>
     </>

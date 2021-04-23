@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function KegDetails(props){
   const { keg, onServingPint, onSwappingKeg } = props;
   const styleKegInfo = {
-    paddingLeft: '2%',
+    paddingLeft: '2%'
   }
   const styleListItems = {
     backgroundColor: "Black",
@@ -16,7 +16,7 @@ function KegDetails(props){
     paddingLeft: '2%',
     marginRight: '70%',
     marginLeft: '8%',
-    borderRadius:'8px',
+    borderRadius:'8px'
   }
   const styleQuarterLeft = {
     backgroundColor: 'rgb(160, 104, 0)',
@@ -28,8 +28,8 @@ function KegDetails(props){
     paddingLeft: '2%',
     marginRight: '70%',
     marginLeft: '8%',
-    borderRadius:'8px',
-      }
+    borderRadius:'8px'
+  }
   const styleTenLeft = {
     backgroundColor: "rgb(95,6,6)",
     color: "white",    
@@ -40,8 +40,8 @@ function KegDetails(props){
     paddingLeft: '2%',
     marginRight: '70%',
     marginLeft: '8%',
-    borderRadius:'8px',
-      }
+    borderRadius:'8px'
+  }
   
   return (
     <>
@@ -50,42 +50,46 @@ function KegDetails(props){
       {keg.quantity > 25 &&
         <div style = {styleListItems}>
           <h3>{keg.name}</h3>
-        <p>Price per Pint: {keg.price}</p>
-        <p>Alcohol Content: {keg.potency}% ABV</p>
-        <p>{keg.description}</p>
-        <p>Current Pints Remaining: {keg.quantity}</p>
-        <button className='button' onClick={()=> onServingPint(keg.id) }>Serve Pint</button>
-        </div>}
+          <p>Price per Pint: {keg.price}</p>
+          <p>Alcohol Content: {keg.potency}% ABV</p>
+          <p>{keg.description}</p>
+          <p>Current Pints Remaining: {keg.quantity}</p>
+          <button className='button' onClick={()=> onServingPint(keg.id) }>Serve Pint</button>
+        </div>
+      }
 
-        {keg.quantity <= 25 && keg.quantity > 10 &&
-          <div style = {styleQuarterLeft}>
-            <h3>{keg.name}</h3>
-            <p>Price per Pint: {keg.price}</p>
-            <p>Alcohol Content: {keg.potency}% ABV</p>
-            <p>{keg.description}</p>
-            <p>Current Pints Remaining: {keg.quantity}</p>
-            <button className='button' onClick={()=> onServingPint(keg.id) }>Serve Pint</button>
-          </div>}
-
-        {keg.quantity <= 10 && keg.quantity > 0 &&
-          <div style = {styleTenLeft}>
+      {keg.quantity <= 25 && keg.quantity > 10 &&
+        <div style = {styleQuarterLeft}>
           <h3>{keg.name}</h3>
-            <p>Price per Pint: {keg.price}</p>
-            <p>Alcohol Content: {keg.potency}% ABV</p>
-            <p>{keg.description}</p>
-            <p>Current Pints Remaining: {keg.quantity}</p>
-            <button className='button' onClick={()=> onServingPint(keg.id) }>Serve Pint</button>
-          </div>}
+          <p>Price per Pint: {keg.price}</p>
+          <p>Alcohol Content: {keg.potency}% ABV</p>
+          <p>{keg.description}</p>
+          <p>Current Pints Remaining: {keg.quantity}</p>
+          <button className='button' onClick={()=> onServingPint(keg.id) }>Serve Pint</button>
+        </div>
+      }
 
-        {keg.quantity === 0 &&
-          <div style = {styleTenLeft}>
-            <h3>{keg.name}</h3>
-              <p>Price per Pint: {keg.price}</p>
-              <p>Alcohol Content: {keg.potency}% ABV</p>
-              <p>{keg.description}</p>
-            <h1>Keg is Cashed. Waiting for some fresh brew.</h1>
-            <button className='kegButton' onClick={()=> onSwappingKeg(keg.id) }>Swap Keg</button>
-          </div>}
+      {keg.quantity <= 10 && keg.quantity > 0 &&
+        <div style = {styleTenLeft}>
+          <h3>{keg.name}</h3>
+          <p>Price per Pint: {keg.price}</p>
+          <p>Alcohol Content: {keg.potency}% ABV</p>
+          <p>{keg.description}</p>
+          <p>Current Pints Remaining: {keg.quantity}</p>
+          <button className='button' onClick={()=> onServingPint(keg.id) }>Serve Pint</button>
+        </div>
+      }
+
+      {keg.quantity === 0 &&
+        <div style = {styleTenLeft}>
+          <h3>{keg.name}</h3>
+          <p>Price per Pint: {keg.price}</p>
+          <p>Alcohol Content: {keg.potency}% ABV</p>
+          <p>{keg.description}</p>
+          <h1>Keg is Cashed. Waiting for some fresh brew.</h1>
+          <button className='kegButton' onClick={()=> onSwappingKeg(keg.id) }>Swap Keg</button>
+        </div>
+      }
     </>
   );
 }
@@ -97,15 +101,3 @@ KegDetails.propTypes = {
 };
 
 export default KegDetails;
-
-// <div style={styleListItems}>
-// <h3>{keg.name}</h3>
-// <p>Price per Pint: {keg.price}</p>
-// <p>Alcohol Content {keg.potency}% ABV</p>
-// <p>{keg.description}</p>
-// <p>Current Pints Remaining: {keg.quantity}</p>
-// {keg.quantity > 0 &&
-//   <button className='button' onClick={()=> onServingPint(keg.id) }>Serve Pint</button>}
-// {keg.quantity === 0 &&
-//   <h1>Keg is Cashed. Waiting for some fresh brew.</h1> &&
-//   <button className='kegButton' onClick={()=> onSwappingKeg(keg.id) }>Swap Keg</button>}
