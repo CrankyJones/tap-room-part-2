@@ -16,13 +16,13 @@ function Keg(props) {
   );
 }
 
-Keg.porptypes = {
+Keg.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   potency: PropTypes.string.isRequired,
   quantity:  PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   whenKegClicked: PropTypes.func
 }
 

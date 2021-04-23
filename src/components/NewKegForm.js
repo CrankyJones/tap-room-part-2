@@ -9,7 +9,7 @@ function NewKegForm(props) {
                             price: event.target.price.value,
                             description: event.target.description.value,
                             potency: event.target.potency.value,
-                            quantity: 124,
+                            quantity: "124",
                             id: v4()});
   }
   return(
