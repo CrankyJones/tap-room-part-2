@@ -27,7 +27,7 @@ A React web app for creating beers for a tap room. It allows users to add new ke
 ## Component Diagram
 Diagram showing parent and children components and how they will be structured in relation to one another:
 
-<div><img src="src/img/tap-room-diagram.png" alt="Component Diagram" width = 500 ></div>
+<div><img src="src/img/tap-room-diagram.PNG" alt="Component Diagram" width = 500 ></div>
 
 ---
 
