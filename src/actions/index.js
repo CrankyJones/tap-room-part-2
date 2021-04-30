@@ -20,7 +20,7 @@ export const toggleForm = () => ({
 export const restock = (keg) => {
   const { name, price, description, potency, quantity, id } = keg;
   return { 
-    type: c.ADD_KEG,
+    type: c.RESTOCK,
     name: name,
     price: price,
     description: description,
@@ -33,7 +33,7 @@ export const restock = (keg) => {
 export const servePint = (keg) => {
   const { name, price, description, potency, quantity, id } = keg;
   return { 
-    type: c.ADD_KEG,
+    type: c.SERVE_PINT,
     name: name,
     price: price,
     description: description,
@@ -42,3 +42,16 @@ export const servePint = (keg) => {
     id: id
   }
 }
+
+// export const selectKeg = (keg) => {
+//   const { name, price, description, potency, quantity, id } = keg;
+//   return { 
+//     type: c.SELECT_KEG,
+//     name: name,
+//     price: price,
+//     description: description,
+//     potency: potency,
+//     quantity: quantity,
+//     id: id
+//   }
+// }

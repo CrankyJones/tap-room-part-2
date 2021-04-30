@@ -32,10 +32,10 @@ describe('tap room actions', () => {
     price: '7',
     description: 'A big beer!',
     potency: '5.6',
-    quantity: 50,
+    quantity: 0,
     id: 1
   })).toEqual({
-      type: c.ADD_KEG,
+      type: c.RESTOCK,
       name: 'Big Beer',
       price: '7',
       description: 'A big beer!',
@@ -53,7 +53,7 @@ describe('tap room actions', () => {
     potency: '5.6',
     quantity: 50,
     id: 1})).toEqual({
-      type: c.ADD_KEG,
+      type: c.SERVE_PINT,
       name: 'Big Beer',
       price: '7',
       description: 'A big beer!',

@@ -37,6 +37,18 @@ export default (state = {}, action) => {
         }
       });
 
+    // case c.SELECT_KEG:
+    // return Object.assign({}, state, {
+    //   [id]: {
+    //     name: name,
+    //     price: price,
+    //     description: description,
+    //     potency: potency,
+    //     quantity: quantity,
+    //     id: id
+    //   }
+    // });
+
     default:
       return state;
   }
