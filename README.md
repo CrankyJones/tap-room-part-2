@@ -14,6 +14,7 @@ An independent project for React Fundamentals.
 * _JavaScript_
 * _JSX_
 * _React_
+* _Redux_
 * _SASS_
 * _draw.io_
 * _git 2.30.0_
@@ -48,6 +49,8 @@ Diagram showing parent and children components and how they will be structured i
 ---
 
 ## Known Bugs
+
+* Keg tile disappears when swapping out the keg for a fresh one. It still exists in the list and will be redisplayed on the list component.
 
 ---
 
