@@ -10,15 +10,15 @@ class KegControl extends React.Component {
   constructor(props) {
     super(props);
       this.state = {
-        selectedKeg: null
+        // selectedKeg: null
       };
   };
 
   handleClick = () => {
-    if (this.state.selectedKeg != null) {
-      this.setState({
-        selectedKeg: null
-      });
+    if (this.props.selectedKeg != null) {
+      const { dispatch } = this.props;
+      const action = a.resetSelectedKeg();
+      dispatch(action);
     } else {
       const { dispatch } = this.props;
       const action = a.toggleForm();
@@ -27,8 +27,9 @@ class KegControl extends React.Component {
     }
 
   handleChangingSelectedKeg = (id) => {
-    const selectedKeg = this.props.masterKegList[id];
-    this.setState({selectedKeg: selectedKeg});
+    const { dispatch } = this.props;
+    const action = a.selectKeg();
+    dispatch(action);
   }
 
   handleAddingNewKegToList = (newKeg) => {
@@ -59,8 +60,8 @@ class KegControl extends React.Component {
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
-    if (this.state.selectedKeg != null) {
-      currentlyVisibleState = <KegDetails keg = {this.state.selectedKeg} 
+    if (this.props.selectedKeg != null) {
+      currentlyVisibleState = <KegDetails keg = {this.props.selectedKeg} 
                                           onServingPint = {this.handleServingPint}
                                           onSwappingKeg = {this.handleSwappingKeg}/>
       buttonText = "Return to Keg List";

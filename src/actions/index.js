@@ -17,4 +17,12 @@ export const toggleForm = () => ({
   type: c.TOGGLE_FORM
 });
 
+export const resetSelectedKeg = () => ({
+  type: c.RESET_SELECTED_KEG
+});
+
+export const selectKeg = () => ({
+  type: c.SELECT_KEG
+});
+
 
