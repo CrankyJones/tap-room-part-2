@@ -33,7 +33,7 @@ Diagram showing parent and children components and how they will be structured i
 
 ## Setup/Installation
 
-* To clone this directory, navigate in your terminal to the desired location of the project and run command `git clone https://github.com/CrankyJones/tap-room.git`
+* To clone this directory, navigate in your terminal to the desired location of the project and run command `git clone https://github.com/CrankyJones/tap-room-part-2.git`
 * Navigate to top level of the directory with command `cd tap-room`
 * Run local server with command `npm run start`
 
