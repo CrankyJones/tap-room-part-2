@@ -10,15 +10,15 @@ class KegControl extends React.Component {
   constructor(props) {
     super(props);
       this.state = {
-        // selectedKeg: null
+        selectedKeg: null
       };
   };
 
   handleClick = () => {
-    if (this.props.selectedKeg != null) {
-      const { dispatch } = this.props;
-      const action = a.resetSelectedKeg();
-      dispatch(action);
+    if (this.state.selectedKeg != null) {
+      this.setState({
+        selectedKeg: null
+      });
     } else {
       const { dispatch } = this.props;
       const action = a.toggleForm();
@@ -27,9 +27,8 @@ class KegControl extends React.Component {
     }
 
   handleChangingSelectedKeg = (id) => {
-    const { dispatch } = this.props;
-    const action = a.selectKeg();
-    dispatch(action);
+    const selectedKeg = this.props.masterKegList[id];
+    this.setState({selectedKeg: selectedKeg});
   }
 
   handleAddingNewKegToList = (newKeg) => {
@@ -60,8 +59,8 @@ class KegControl extends React.Component {
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
-    if (this.props.selectedKeg != null) {
-      currentlyVisibleState = <KegDetails keg = {this.props.selectedKeg} 
+    if (this.state.selectedKeg != null) {
+      currentlyVisibleState = <KegDetails keg = {this.state.selectedKeg} 
                                           onServingPint = {this.handleServingPint}
                                           onSwappingKeg = {this.handleSwappingKeg}/>
       buttonText = "Return to Keg List";
@@ -88,14 +87,14 @@ class KegControl extends React.Component {
 KegControl.propTypes = {
   masterKegList: PropTypes.object,
   formVisibleOnPage: PropTypes.bool,
-  selectedKeg: PropTypes.object
+  // selectedKeg: PropTypes.object
 };
 
 const mapStateToProps = state => {
   return {
     masterKegList: state.masterKegList,
     formVisibleOnPage: state.formVisibleOnPage,
-    selectedKeg: state.selectedKeg
+    // selectedKeg: state.selectedKeg
   }
 }
 

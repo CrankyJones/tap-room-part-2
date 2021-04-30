@@ -14,6 +14,20 @@ export default (state = {}, action) => {
           id: id
         }
       });
+    case c.RESTOCK:
+      return Object.assign({}, state, {
+        [id]: {
+          quantity: 124,
+          id: id
+        }
+      });
+    case c.SERVE_PINT:
+      return Object.assign({}, state, {
+        [id]: {
+          quantity: quantity - 1,
+          id: id
+        }
+      });
     default:
       return state;
   }
