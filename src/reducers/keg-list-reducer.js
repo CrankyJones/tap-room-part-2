@@ -17,17 +17,26 @@ export default (state = {}, action) => {
     case c.RESTOCK:
       return Object.assign({}, state, {
         [id]: {
-          quantity: 124,
+          name: name,
+          price: price,
+          description: description,
+          potency: potency,
+          quantity: quantity,
           id: id
         }
       });
     case c.SERVE_PINT:
       return Object.assign({}, state, {
         [id]: {
-          quantity: quantity - 1,
+          name: name,
+          price: price,
+          description: description,
+          potency: potency,
+          quantity: quantity,
           id: id
         }
       });
+
     default:
       return state;
   }

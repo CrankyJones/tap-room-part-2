@@ -40,20 +40,15 @@ class KegControl extends React.Component {
   }
 
   handleServingPint = (id) => {
-    const selectedKeg = this.props.masterKegList[id];
-    if (selectedKeg) {
-      const newQuantity = (parseInt(selectedKeg.quantity) - 1)
-      selectedKeg.quantity = newQuantity
-      this.setState({selectedKeg: selectedKeg})
-    }
+      const { dispatch } = this.props;
+      const action = a.servePint(this.props.masterKegList[id]);
+      dispatch(action);
   }
   
   handleSwappingKeg = (id) => {
-    const selectedKeg = this.props.masterKegList[id];
-    if (selectedKeg) {
-      selectedKeg.quantity = '124'
-      this.setState({selectedKeg: selectedKeg})
-    }
+      const { dispatch } = this.props;
+      const action = a.restock(this.props.masterKegList[id]);
+      dispatch(action);
   }
 
   render() {
@@ -87,14 +82,14 @@ class KegControl extends React.Component {
 KegControl.propTypes = {
   masterKegList: PropTypes.object,
   formVisibleOnPage: PropTypes.bool,
-  // selectedKeg: PropTypes.object
+  selectedKeg: PropTypes.object
 };
 
 const mapStateToProps = state => {
   return {
     masterKegList: state.masterKegList,
     formVisibleOnPage: state.formVisibleOnPage,
-    // selectedKeg: state.selectedKeg
+    selectedKeg: state.selectedKeg
   }
 }
 

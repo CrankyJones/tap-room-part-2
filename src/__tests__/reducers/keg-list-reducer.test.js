@@ -4,24 +4,6 @@ import * as c from './../../actions/ActionTypes';
 describe('kegListReducer', () => {
 
   let action;
-  // const currentState = {
-  //   1: {
-  //     name: 'Big Beer',
-  //     price: '7',
-  //     description: 'A big beer!',
-  //     potency: '5.6',
-  //     quantity: 124,
-  //     id: 1
-  //   },
-  //   2: {
-  //   name: 'Small Beer',
-  //   price: '2',
-  //   description: 'A small beer!',
-  //   potency: '2.5',
-  //   quantity: 124,
-  //   id: 2
-  //   }
-  // };
   const kegData = {
     name: 'Big Beer',
     price: '7',
